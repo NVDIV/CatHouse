@@ -28,7 +28,7 @@ public class AuthService {
     }
 
 
-    Optional<User> login(String login, String password) {
+    public Optional<User> login(String login, String password) {
         Optional<User> userOpt = userRepository.findByLogin(login);
         if (userOpt.isPresent()) {
             User user = userOpt.get();
