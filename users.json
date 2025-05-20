@@ -2,4 +2,8 @@
   "id" : "10c4cf87-f124-414d-8fa7-00b435fa0fd4",
   "login" : "test",
   "passwordHash" : "$2a$10$Ea.8bCfyPOrYE1LVnwEWF.TMmwatzysAonmjDU9HYfOS51FoRWq/S"
+}, {
+  "id" : "2e562b29-e955-4425-9fb2-e66984201bfe",
+  "login" : "admin",
+  "passwordHash" : "$2a$10$xndTU/yQzcMHj6i.NhUyBeXbj5Z2uBh3Q.Mm8RU1nZu3arkCfXS5C"
 } ]

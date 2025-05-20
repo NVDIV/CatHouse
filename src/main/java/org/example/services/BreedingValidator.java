@@ -4,15 +4,15 @@ import org.example.models.Cat;
 import org.example.models.FemaleCat;
 import org.example.models.MaleCat;
 
+import java.time.LocalDate;
+
 public class BreedingValidator {
-    boolean isAvailableForBreeding(Cat cat) {
-        // TODO
-        return false;
+
+    public boolean isAvailableForBreeding(Cat cat) {
+        return cat.isAvailableForBreeding();
     }
 
-    boolean isValidPair(MaleCat male, FemaleCat female) {
-        // TODO
-        return false;
+    public boolean isValidPair(MaleCat male, FemaleCat female) {
+        return isAvailableForBreeding(male) && isAvailableForBreeding(female);
     }
-
 }

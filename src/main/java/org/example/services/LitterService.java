@@ -1,16 +1,22 @@
 package org.example.services;
 
 import org.example.models.Litter;
+import org.example.repositories.ILitterRepository;
 
 import java.util.ArrayList;
 
 public class LitterService {
-    void addLitter(Litter litter) {
-        // TODO
+    private final ILitterRepository litterRepository;
+
+    public LitterService(ILitterRepository repo) {
+        this.litterRepository = repo;
     }
 
-    ArrayList<Litter> getAllLitters() {
-        return null;
-        // TODO
+    public void addLitter(Litter litter) {
+        litterRepository.save(litter);
+    }
+
+    public ArrayList<Litter> getAllLitters() {
+        return litterRepository.findAll();
     }
 }

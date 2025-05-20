@@ -5,9 +5,17 @@ import java.time.LocalDate;
 public class MaleCat extends Cat{
     LocalDate lastMating;
 
+    public MaleCat() {
+    }
+
     @Override
-    boolean isAvailableForBreeding() {
-        // TODO: logika sprawdzania dostępności do krycia (jeśli minęło > niż 1 miesiąc od ostatniego krycia)
-        return false;
+    public boolean isAvailableForBreeding() {
+        if (lastMating == null) return true;
+        return lastMating.plusMonths(1).isBefore(LocalDate.now());
+    }
+
+    @Override
+    boolean isAdult(LocalDate currentDate) {
+        return true;
     }
 }

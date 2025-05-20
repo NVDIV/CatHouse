@@ -5,9 +5,17 @@ import java.time.LocalDate;
 public class FemaleCat extends Cat {
     LocalDate lastPregnancy;
 
-    @Override
-    boolean isAvailableForBreeding() {
-        // TODO: logika sprawdzania dostępności do krycia (jeśli minęło > niż 4 miesięce od ostatniej ciąży)
-        return false;
+    public FemaleCat() {
     }
+
+    @Override
+    public boolean isAvailableForBreeding() {
+        return lastPregnancy == null || lastPregnancy.plusMonths(4).isBefore(LocalDate.now());
+    }
+
+    @Override
+    boolean isAdult(LocalDate currentDate) {
+        return true;
+    }
+
 }

@@ -1,0 +1,14 @@
+[ {
+  "id" : "fbbb80bf-3dc0-4978-bcea-4e203fc325c4",
+  "name" : "Jenny",
+  "breedId" : "8b3ca3d3-2da0-42d5-8a0e-ea806109a29f"
+}, {
+  "id" : "0b04500f-b736-40b4-a7ad-dd122870a470",
+  "name" : "Clara",
+  "breedId" : "8b3ca3d3-2da0-42d5-8a0e-ea806109a29f",
+  "gender" : "female"
+}, {
+  "id" : "76f89622-f1c9-49f3-9549-150fce9bbb90",
+  "name" : "Muffin",
+  "breedId" : "8b3ca3d3-2da0-42d5-8a0e-ea806109a29f"
+} ]

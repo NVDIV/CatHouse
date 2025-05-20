@@ -1,21 +1,29 @@
 package org.example.services;
 
 import org.example.models.Cat;
+import org.example.repositories.ICatRepository;
 
 import java.util.ArrayList;
+import java.util.stream.Collectors;
 
 public class CatService {
+    private final ICatRepository catRepository;
 
-    void addCat(Cat cat) {
-        // TODO
+    public CatService(ICatRepository catRepository) {
+        this.catRepository = catRepository;
     }
 
-    void removeCat(String id) {
-        // TODO
+    public void addCat(Cat cat) {
+        catRepository.save(cat);
     }
 
-    ArrayList<Cat> getAllCats() {
-        // TODO
-        return null;
+    public void removeCat(String id) {
+        catRepository.deleteById(id);
+    }
+
+    public ArrayList<Cat> getCatsByBreed(String breedId) {
+        return catRepository.findAll().stream()
+                .filter(cat -> cat.getBreedId().equals(breedId))
+                .collect(Collectors.toCollection(ArrayList::new));
     }
 }
